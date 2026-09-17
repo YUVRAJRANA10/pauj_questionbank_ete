@@ -1,0 +1,4 @@
+Amit CSE 55000.00
+Neha ECE 45000.00
+Rahul CSE 66000.00
+Simran IT 55000.00

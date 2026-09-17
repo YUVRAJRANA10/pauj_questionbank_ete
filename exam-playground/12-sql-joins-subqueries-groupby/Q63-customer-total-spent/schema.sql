@@ -1,0 +1,5 @@
+CREATE TABLE Orders (order_id INT PRIMARY KEY, customer_id INT, amount INT);
+INSERT INTO Orders VALUES (1, 101, 100);
+INSERT INTO Orders VALUES (2, 101, 250);
+INSERT INTO Orders VALUES (3, 102, 300);
+INSERT INTO Orders VALUES (4, 103, 50);

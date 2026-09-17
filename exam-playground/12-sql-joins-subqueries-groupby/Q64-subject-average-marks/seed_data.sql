@@ -1,0 +1,6 @@
+CREATE TABLE Marks (student_id INT, subject VARCHAR(20), marks INT);
+INSERT INTO Marks VALUES (101, 'Java', 80);
+INSERT INTO Marks VALUES (102, 'Java', 70);
+INSERT INTO Marks VALUES (103, 'SQL', 90);
+INSERT INTO Marks VALUES (104, 'SQL', 60);
+INSERT INTO Marks VALUES (105, 'Python', 75);
