@@ -1,22 +1,17 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: withdrawal validation
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for withdrawal validation");
+        int balance = sc.nextInt();
+        int amount = sc.nextInt();
+        try {
+            if (amount <= 0) throw new IllegalArgumentException();
+            if (amount > balance) throw new ArithmeticException();
+            System.out.println(balance - amount);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid Amount");
+        } catch (ArithmeticException e) {
+            System.out.println("Insufficient Balance");
+        }
     }
 }

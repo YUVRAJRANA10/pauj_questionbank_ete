@@ -1,20 +1,16 @@
 import java.util.*;
-
+import java.time.*;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read and normalize the input for: exam end time
-        // This category depends on data processing / normalization / Date-Time logic.
-
-        // Example shape:
-        // int n = sc.nextInt();
-        // sc.nextLine();
-        // for (int i = 0; i < n; i++) {
-        //     String line = sc.nextLine();
-        //     // parse and process each line
-        // }
-
-        System.out.println("TODO: implement solution for exam end time");
+        LocalDate d = LocalDate.parse(sc.next());
+        LocalTime t = LocalTime.parse(sc.next());
+        int extra = sc.nextInt();
+        LocalDateTime end = LocalDateTime.of(d, t).plusMinutes(extra);
+        System.out.println(end.toLocalDate());
+        System.out.println(end.toLocalTime());
+        System.out.println(end.getYear());
+        System.out.println(end.getMonthValue());
+        System.out.println(end.getHour());
     }
 }

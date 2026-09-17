@@ -14,6 +14,9 @@ public class Solution {
     static double calculateFinalAmount(double amount, double discountPercent,
                                        double servicePercent) {
         // TODO: apply the discount first, then calculate service charge.
-        return 0.0;
+        double discount = amount * discountPercent / 100;
+        double serviceCharge = (amount - discount) * servicePercent / 100;
+        double finalAmount = amount - discount + serviceCharge;
+        return finalAmount;
     }
 }

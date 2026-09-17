@@ -1,20 +1,12 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // square stringbuilder output
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for square stringbuilder output");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; i++) { if (i > 0) sb.append(' '); sb.append(arr[i] * arr[i]); }
+        System.out.println(sb);
     }
 }

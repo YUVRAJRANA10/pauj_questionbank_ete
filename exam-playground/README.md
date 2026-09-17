@@ -5,12 +5,23 @@ This workspace contains all 70 PAUJ exam questions extracted from `question_bank
 ## What Is Complete
 - All 70 folders and prompt statements are present.
 - Every Java question (Q01-Q58) has a compilable `Solution.java` starter file.
+- Every Java question (Q01-Q58) now has a completed reference answer in `_solutions`.
 - Every SQL question (Q59-Q70) has seeded tables, an `attempt.sql` query, and expected output.
 - Q01-Q10 have question-specific Java parsing and method scaffolds.
-- The remaining Java files provide category-oriented starter templates that you complete.
+- Q11-Q58 provide category-oriented starter templates that you complete.
 
 ## Important: Where Are The Solutions?
-The Java files are intentionally practice scaffolds, not completed answer keys. The `TODO` markers are where you write the solution. The `_solutions` directory is a generated reference mirror of the same prompt and starter artifacts; it is not a hidden set of completed Java answers.
+The main question folders are your practice area. The `TODO` markers are where you write your solution. The completed Java answer for a question is in the matching path under `_solutions`, for example:
+
+```text
+Your file:
+01-java-basics-oop/Q04-kg-to-grams/Solution.java
+
+Reference answer:
+_solutions/01-java-basics-oop/Q04-kg-to-grams/Solution.java
+```
+
+Do not copy the reference answer before attempting the question. Use it only to compare your approach after trying the sample and edge cases.
 
 The SQL `attempt.sql` files are already filled with executable practice queries. You can first rewrite them yourself, then compare your query with the generated attempt and `expected_output.txt`.
 
@@ -30,6 +41,12 @@ To compile all Java starters at once from `exam-playground`:
 python .\run_tests.py
 ```
 This checks compilation only; it does not prove that your TODO logic is correct.
+
+To run every completed reference answer against its sample testcase:
+```powershell
+python .\run_reference_tests.py
+```
+The command reports the total, passed, and failed count. Four source prompts currently have inconsistent sample outputs: Q01, Q03, Q09, and Q44. Their reference answers follow the written formula/rules, so those four may be reported as failed against the printed sample output.
 
 ## How To Run A SQL Question
 Each SQL folder contains:

@@ -1,20 +1,11 @@
 import java.util.*;
-
 public class Solution {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: livelock retry management
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for livelock retry management");
+        int attempts = sc.nextInt();
+        System.out.println("Communication Started");
+        for (int i = 0; i < attempts - 1; i++) System.out.println("Retrying");
+        System.out.println("Message Sent Successfully");
+        System.out.println("Communication Completed");
     }
 }

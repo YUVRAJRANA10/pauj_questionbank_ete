@@ -1,20 +1,11 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: thread join processing
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for thread join processing");
+        int n = sc.nextInt();
+        Thread t = new Thread(() -> System.out.println("Tickets Processed: " + n));
+        t.start();
+        t.join();
+        System.out.println("Processing Completed");
     }
 }

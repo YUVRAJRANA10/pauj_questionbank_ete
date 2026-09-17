@@ -1,20 +1,10 @@
 import java.util.*;
-
+class Counter { private int count = 0; synchronized void add(int n) { count += n; } int value() { return count; } }
 public class Solution {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: synchronized visitor counter
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for synchronized visitor counter");
+        Counter c = new Counter();
+        c.add(sc.nextInt()); c.add(sc.nextInt());
+        System.out.println("Total Visitors: " + c.value());
     }
 }

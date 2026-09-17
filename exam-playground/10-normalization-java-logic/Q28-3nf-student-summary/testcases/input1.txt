@@ -1,0 +1,7 @@
+6
+201 Arjun 10 ComputerScience
+202 Priya 20 Commerce
+203 Karan 10 ComputerScience
+201 Arjun 10 ComputerScience
+204 Sneha 30 Mathematics
+202 Priya 20 Commerce

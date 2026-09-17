@@ -1,20 +1,12 @@
 import java.util.*;
-
+class OrderThread extends Thread {
+    int id; OrderThread(int id) { this.id = id; }
+    public void run() { System.out.println("Order " + id + " Processing"); }
+}
 public class Solution {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: thread class order
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for thread class order");
+        int id = sc.nextInt();
+        new OrderThread(id).start();
     }
 }

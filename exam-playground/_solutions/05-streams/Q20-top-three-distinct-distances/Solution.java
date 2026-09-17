@@ -1,22 +1,13 @@
 import java.util.*;
-
+import java.util.stream.*;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: top three distinct distances
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for top three distinct distances");
+        int n = sc.nextInt();
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) list.add(sc.nextInt());
+        List<Integer> ans = list.stream().distinct().sorted(Comparator.reverseOrder()).limit(3).collect(Collectors.toList());
+        for (int i = 0; i < ans.size(); i++) { if (i > 0) System.out.print(" " ); System.out.print(ans.get(i)); }
+        System.out.println();
     }
 }

@@ -1,22 +1,12 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: linkedlist remove first occurrence
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for linkedlist remove first occurrence");
+        int n = sc.nextInt();
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < n; i++) list.add(sc.nextInt());
+        int target = sc.nextInt();
+        if (!list.removeFirstOccurrence(target)) System.out.println("Task Not Found");
+        else { for (int i = 0; i < list.size(); i++) { if (i > 0) System.out.print(" " ); System.out.print(list.get(i)); } System.out.println(); }
     }
 }

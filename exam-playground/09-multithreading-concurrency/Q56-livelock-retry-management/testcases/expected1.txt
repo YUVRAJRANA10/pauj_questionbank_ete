@@ -1,0 +1,5 @@
+Communication Started
+Retrying
+Retrying
+Message Sent Successfully
+Communication Completed

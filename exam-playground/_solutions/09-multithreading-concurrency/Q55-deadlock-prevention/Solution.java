@@ -1,20 +1,15 @@
 import java.util.*;
-
+class Resource { }
 public class Solution {
-    public static void main(String[] args) throws Exception {
+    static void doWork(Resource a, Resource b, String threadName) {
+        synchronized (a) { synchronized (b) { System.out.println(threadName + " Completed"); } }
+    }
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: deadlock prevention
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for deadlock prevention");
+        int a = sc.nextInt(); int b = sc.nextInt();
+        Resource r1 = new Resource(); Resource r2 = new Resource();
+        doWork(r1, r2, "Thread 1");
+        doWork(r1, r2, "Thread 2");
+        System.out.println("Production Completed");
     }
 }

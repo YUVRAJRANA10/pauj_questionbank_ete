@@ -1,22 +1,13 @@
 import java.util.*;
-
+class Box<T> { private T value; Box(T value) { this.value = value; } T getValue() { return value; } }
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: generic box
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for generic box");
+        int a = sc.nextInt();
+        double b = sc.nextDouble();
+        Box<Integer> x = new Box<>(a);
+        Box<Double> y = new Box<>(b);
+        System.out.println(x.getValue());
+        System.out.printf("%.2f\n", y.getValue());
     }
 }

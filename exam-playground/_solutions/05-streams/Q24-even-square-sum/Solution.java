@@ -1,22 +1,11 @@
 import java.util.*;
-
+import java.util.stream.*;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: even square sum
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for even square sum");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+        System.out.println(IntStream.of(arr).filter(x -> x % 2 == 0).map(x -> x * x).sum());
     }
 }

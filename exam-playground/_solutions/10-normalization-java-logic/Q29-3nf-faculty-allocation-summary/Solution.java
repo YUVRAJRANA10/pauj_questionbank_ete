@@ -1,20 +1,9 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read and normalize the input for: 3nf faculty allocation summary
-        // This category depends on data processing / normalization / Date-Time logic.
-
-        // Example shape:
-        // int n = sc.nextInt();
-        // sc.nextLine();
-        // for (int i = 0; i < n; i++) {
-        //     String line = sc.nextLine();
-        //     // parse and process each line
-        // }
-
-        System.out.println("TODO: implement solution for 3nf faculty allocation summary");
+        int n = sc.nextInt();
+        Set<Integer> seen = new HashSet<>();
+        for (int i = 0; i < n; i++) { int id = sc.nextInt(); int fid = sc.nextInt(); String name = sc.next(); int room = sc.nextInt(); if (seen.add(fid)) System.out.println(fid + " " + name + " " + room); }
     }
 }

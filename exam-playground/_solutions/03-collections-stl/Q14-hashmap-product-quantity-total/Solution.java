@@ -1,22 +1,13 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: hashmap product quantity total
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for hashmap product quantity total");
+        int n = sc.nextInt();
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) { map.put(sc.nextInt(), sc.nextInt()); }
+        int q = sc.nextInt();
+        int total = 0;
+        for (int i = 0; i < q; i++) total += map.getOrDefault(sc.nextInt(), 0);
+        System.out.println(total);
     }
 }

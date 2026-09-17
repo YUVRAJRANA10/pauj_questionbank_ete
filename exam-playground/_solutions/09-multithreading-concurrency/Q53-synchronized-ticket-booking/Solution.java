@@ -1,20 +1,11 @@
 import java.util.*;
-
+class TicketBooking { private int tickets; TicketBooking(int t) { tickets = t; } synchronized void book(int req) { if (req <= tickets) tickets -= req; } int rem() { return tickets; } }
 public class Solution {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: synchronized ticket booking
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for synchronized ticket booking");
+        TicketBooking tb = new TicketBooking(sc.nextInt());
+        int req = sc.nextInt();
+        tb.book(req);
+        System.out.println("Tickets Remaining: " + tb.rem());
     }
 }

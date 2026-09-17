@@ -1,20 +1,12 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // garbage collection request
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for garbage collection request");
+        int n = sc.nextInt();
+        List<String> temp = new ArrayList<>();
+        for (int i = 0; i < n; i++) temp.add("obj" + i);
+        temp.clear();
+        System.gc();
+        System.out.println("Garbage Collection Requested");
     }
 }

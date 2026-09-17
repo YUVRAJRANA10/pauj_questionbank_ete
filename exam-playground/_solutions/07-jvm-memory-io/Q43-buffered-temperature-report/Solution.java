@@ -1,20 +1,11 @@
-import java.util.*;
-
+import java.io.*;
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // buffered temperature report
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for buffered temperature report");
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        String[] tokens = br.readLine().trim().split("\\s+");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tokens.length; i++) { if (i > 0) sb.append(' '); sb.append(Integer.parseInt(tokens[i]) + 2); }
+        System.out.println(sb);
     }
 }

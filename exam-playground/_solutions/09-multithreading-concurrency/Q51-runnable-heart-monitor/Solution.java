@@ -1,20 +1,14 @@
 import java.util.*;
-
+class MonitoringTask implements Runnable {
+    int[] arr; MonitoringTask(int[] arr) { this.arr = arr; }
+    public void run() { for (int v : arr) System.out.println("Monitoring: " + v); }
+}
 public class Solution {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the thread / concurrency task: runnable heart monitor
-        // Use the required pattern from Problem.md:
-        // - Thread class
-        // - Runnable
-        // - synchronized block
-        // - join()
-
-        // Example starter:
-        // int n = sc.nextInt();
-        // System.out.println("Processing: " + n);
-
-        System.out.println("TODO: implement solution for runnable heart monitor");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+        new Thread(new MonitoringTask(arr)).start();
     }
 }

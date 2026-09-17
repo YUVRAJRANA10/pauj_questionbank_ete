@@ -1,0 +1,7 @@
+6
+501 Rahul 301 Checkup DrKumar
+502 Neha 302 XRay DrSharma
+501 Rahul 303 BloodTest DrMehta
+503 Aman 301 Checkup DrKumar
+502 Neha 304 MRI DrSingh
+501 Rahul 305 ECG DrPatel

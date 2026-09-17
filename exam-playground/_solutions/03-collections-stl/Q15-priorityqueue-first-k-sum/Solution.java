@@ -1,22 +1,13 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: priorityqueue first k sum
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for priorityqueue first k sum");
+        int n = sc.nextInt();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int i = 0; i < n; i++) pq.add(sc.nextInt());
+        int k = sc.nextInt();
+        int sum = 0;
+        for (int i = 0; i < k; i++) sum += pq.poll();
+        System.out.println(sum);
     }
 }

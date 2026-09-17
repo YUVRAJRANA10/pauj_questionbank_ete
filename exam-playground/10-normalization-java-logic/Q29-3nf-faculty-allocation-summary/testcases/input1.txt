@@ -1,0 +1,8 @@
+7
+101 501 Sharma 201
+102 502 Mehta 202
+103 501 Sharma 201
+104 503 Gupta 203
+105 502 Mehta 202
+106 504 Singh 204
+107 501 Sharma 201

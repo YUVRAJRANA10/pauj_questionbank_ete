@@ -1,17 +1,16 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long number = sc.nextLong();
-        int evenSum = 0;
-        int oddSum = 0;
-        while (number > 0) {
-            int digit = (int) (number % 10);
-            // TODO: add the digit to the correct sum.
-            number /= 10;
+        int n = sc.nextInt();
+        int even = 0, odd = 0;
+        while (n > 0) {
+            int d = n % 10;
+            if (d % 2 == 0) even += d;
+            else odd += d;
+            n /= 10;
         }
-        System.out.println(evenSum);
-        System.out.println(oddSum);
+        System.out.println(even);
+        System.out.println(odd);
     }
 }

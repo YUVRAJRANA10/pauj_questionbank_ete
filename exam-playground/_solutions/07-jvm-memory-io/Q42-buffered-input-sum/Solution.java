@@ -1,20 +1,11 @@
-import java.util.*;
-
+import java.io.*;
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // buffered input sum
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for buffered input sum");
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        String[] tokens = br.readLine().trim().split("\\s+");
+        int sum = 0;
+        for (String token : tokens) sum += Integer.parseInt(token);
+        System.out.println(sum);
     }
 }

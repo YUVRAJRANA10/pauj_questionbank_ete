@@ -1,22 +1,10 @@
 import java.util.*;
-
+class InvalidScoreException extends Exception { InvalidScoreException() { super("Invalid Score"); } }
 public class Solution {
+    static void validateScore(int score) throws InvalidScoreException { if (score < 0 || score > 100) throw new InvalidScoreException(); }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: read problem-specific input
-        // Example pattern for this question: custom exception score validation
-        // Use the exact input format from Problem.md.
-
-        // --- starter skeleton ---
-        // int n = sc.nextInt();
-        // int[] values = new int[n];
-        // for (int i = 0; i < n; i++) {
-        //     values[i] = sc.nextInt();
-        // }
-        //
-        // TODO: implement the required logic and print the answer.
-
-        System.out.println("TODO: implement solution for custom exception score validation");
+        int score = sc.nextInt();
+        try { validateScore(score); System.out.println(score); } catch (InvalidScoreException e) { System.out.println("Invalid Score"); }
     }
 }

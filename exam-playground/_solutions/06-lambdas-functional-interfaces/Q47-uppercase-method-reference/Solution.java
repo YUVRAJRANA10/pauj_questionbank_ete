@@ -1,20 +1,11 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // uppercase method reference
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for uppercase method reference");
+        int n = sc.nextInt();
+        String[] arr = new String[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.next();
+        for (int i = 0; i < n; i++) { if (i > 0) System.out.print(" " ); System.out.print(arr[i].toUpperCase()); }
+        System.out.println();
     }
 }

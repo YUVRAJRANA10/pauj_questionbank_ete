@@ -1,20 +1,12 @@
 import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // parking fee
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for parking fee");
+        int hours = sc.nextInt();
+        int fee = 0;
+        if (hours <= 0) fee = 0;
+        else if (hours <= 2) fee = hours * 20;
+        else fee = hours * 40;
+        System.out.println(fee);
     }
 }

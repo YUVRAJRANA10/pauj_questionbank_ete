@@ -1,20 +1,15 @@
 import java.util.*;
-
+interface Operation { int apply(int x, int y); }
 public class Solution {
+    static int applyOperation(int amount, int value, String type) {
+        Operation op = type.equals("ADD") ? (x, y) -> x + y : (x, y) -> x * y;
+        return op.apply(amount, value);
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        // TODO: implement the Java memory / stream / lambda / functional interface task:
-        // functional operation argument
-
-        // Example patterns commonly used in this category:
-        // int n = sc.nextInt();
-        // int[] nums = new int[n];
-        // for (int i = 0; i < n; i++) nums[i] = sc.nextInt();
-        //
-        // for (int x : nums)
-        //     System.out.println(x);
-
-        System.out.println("TODO: implement solution for functional operation argument");
+        int amount = sc.nextInt();
+        int value = sc.nextInt();
+        String type = sc.next();
+        System.out.println(applyOperation(amount, value, type));
     }
 }
